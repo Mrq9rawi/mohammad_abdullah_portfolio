@@ -19,6 +19,7 @@ html {
 }
 
 body {
+	color: white;
 }
 
 ul {
@@ -209,8 +210,41 @@ main .landing .container a {
 		padding: 15px 25px;
 		font-size: 15px;
 		margin-bottom: 100px;
-
 	}
 }
 
 /* Landing End */
+/* About Start */
+
+main .about-me {
+	padding-top: var(--main-padding);
+	padding-bottom: var(--main-padding);
+	background-color: var(--secondary-black);
+}
+
+main .about-me .container {
+	display: flex;
+	justify-content: flex-end;
+}
+
+main .about-me .container .content {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	flex-basis: 50%;
+}
+
+main .about-me .container .content .links {
+	margin-top: 50px;
+}
+
+main .about-me .container .content .links a {
+	padding: 20px 20px;
+	background-color: var(--main-purple-color);
+	margin-right: 30px;
+	color: white;
+	border-radius: 10px;
+	font-size: 20px;
+}
+
+/* About End */
