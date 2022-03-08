@@ -365,8 +365,221 @@ main .services .container .content > div i {
 	margin-bottom: 10px;
 }
 
-main .services .container .content > div  h4 {
+main .services .container .content > div h4 {
 	font-size: 20px;
 }
 
 /* Services End */
+/* Skills Start */
+
+main .skills {
+	background-color: var(--main-black);
+	padding-top: var(--main-padding);
+	padding-bottom: var(--main-padding);
+}
+
+main .skills .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@media (max-width: 767px) {
+	main .skills .container {
+		flex-direction: column;
+		gap: 60px;
+	}
+}
+
+main .skills .container .text-content {
+}
+
+main .skills .container .skills-icons {
+	display: grid;
+	grid-template-columns: repeat(3, 120px);
+	gap: 20px;
+}
+
+@media (max-width: 767px) {
+	main .skills .container .skills-icons {
+		grid-template-columns: repeat(2, 120px);
+		row-gap: 50px;
+	}
+}
+
+main .skills .container .skills-icons > div {
+	background-color: var(--secondary-black);
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	position: relative;
+}
+
+main .skills .container .skills-icons i {
+	color: var(--main-purple-color);
+}
+
+main .skills .container .skills-icons > div.html:before,
+main .skills .container .skills-icons > div.css:before,
+main .skills .container .skills-icons > div.js:before {
+	position: absolute;
+	width: 50%;
+	font-size: 12px;
+	height: 40px;
+	text-align: center;
+	line-height: 1.5;
+	background-color: var(--secondary-black);
+	color: white;
+	clip-path: polygon(0 0, 100% 0, 100% 75%, 65% 75%, 50% 100%, 35% 75%, 0 75%);
+	top: 0px;
+	border-radius: 3px;
+	line-height: 2.5;
+	z-index: -1;
+	transition: 0.5s;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+main .skills .container .skills-icons > div.html:before {
+	content: "HTML";
+}
+
+main .skills .container .skills-icons > div.css:before {
+	content: "CSS";
+}
+
+main .skills .container .skills-icons > div.js:before {
+	content: "JavaScript";
+	width: 70%;
+}
+
+main .skills .container .skills-icons > div.html:hover::before,
+main .skills .container .skills-icons > div.css:hover::before,
+main .skills .container .skills-icons > div.js:hover::before {
+	top: -45px;
+	z-index: 1;
+}
+
+main .skills .container .skills-icons > div.git::before,
+main .skills .container .skills-icons > div.wordpress::before,
+main .skills .container .skills-icons > div.terminal::before {
+	position: absolute;
+	width: 50%;
+	font-size: 12px;
+	height: 40px;
+	text-align: center;
+	line-height: 1.5;
+	background-color: var(--secondary-black);
+	color: white;
+	clip-path: polygon(
+		0 25%,
+		35% 25%,
+		50% 0%,
+		65% 25%,
+		100% 25%,
+		100% 100%,
+		0% 100%
+	);
+	bottom: -0px;
+	border-radius: 3px;
+	line-height: 4;
+	z-index: -1;
+	transition: 0.5s;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@media (max-width: 767px) {
+	main .skills .container .skills-icons > div.git::before,
+	main .skills .container .skills-icons > div.wordpress::before,
+	main .skills .container .skills-icons > div.terminal::before {
+		clip-path: polygon(
+			0 0,
+			100% 0,
+			100% 75%,
+			65% 75%,
+			50% 100%,
+			35% 75%,
+			0 75%
+		);
+		top: 0px;
+		line-height: 2.5;
+	}
+}
+
+main .skills .container .skills-icons > div.git:before {
+	content: "Git";
+}
+
+main .skills .container .skills-icons > div.wordpress:before {
+	content: "WordPress";
+	width: 70%;
+}
+
+main .skills .container .skills-icons > div.terminal:before {
+	content: "Terminal";
+	width: 70%;
+}
+
+main .skills .container .skills-icons > div.git:hover::before,
+main .skills .container .skills-icons > div.wordpress:hover::before,
+main .skills .container .skills-icons > div.terminal:hover::before {
+	bottom: -45px;
+	z-index: 1;
+}
+
+@media (max-width: 767px) {
+	main .skills .container .skills-icons > div.git:hover::before,
+	main .skills .container .skills-icons > div.wordpress:hover::before,
+	main .skills .container .skills-icons > div.terminal:hover::before {
+		top: -45px;
+		z-index: 1;
+	}
+}
+
+main .skills .container .skills-icons > div::after {
+	content: "";
+	width: 0%;
+	height: 5px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: var(--main-purple-color);
+	border-radius: 0px 0px 5px 5px;
+	transition: 0.5s linear;
+}
+
+main .skills .container .skills-icons > div:hover::after {
+	content: "";
+	width: 100%;
+	height: 5px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: var(--main-purple-color);
+	border-radius: 0px 0px 5px 5px;
+}
+
+/* Skills End */
+/* Footer Start */
+
+footer {
+	background-color: var(--main-purple-color);
+	padding-top: calc(var(--main-padding) - 50px);
+	padding-bottom: calc(var(--main-padding) - 50px);
+}
+
+footer .links {
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	gap: 30px;
+}
+
+footer a {
+	display: inline-block;
+	color: white;
+}
+
+/* Footer End */
