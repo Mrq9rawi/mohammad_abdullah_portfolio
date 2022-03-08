@@ -110,7 +110,7 @@ header nav .links a {
 
 @media (max-width: 767px) {
 	header nav .links a {
-		font-size: 11px;
+		font-size: 10.6px;
 		padding: 20px 10px;
 	}
 }
@@ -588,8 +588,8 @@ footer .back-to-top {
 	top: 45%;
 	right: 5%;
 	transform: translateY(-50%);
-	background-color: var(--secondary-black);
-	padding: 4px 6px;
+	background-color: #3a2c88;
+	padding: 5px 10px;
 }
 
 /* Footer End */
