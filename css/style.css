@@ -567,6 +567,7 @@ footer {
 	background-color: var(--main-purple-color);
 	padding-top: calc(var(--main-padding) - 50px);
 	padding-bottom: calc(var(--main-padding) - 50px);
+	position: relative;
 }
 
 footer .links {
@@ -580,6 +581,15 @@ footer .links {
 footer a {
 	display: inline-block;
 	color: white;
+}
+
+footer .back-to-top {
+	position: absolute;
+	top: 45%;
+	right: 5%;
+	transform: translateY(-50%);
+	background-color: var(--secondary-black);
+	padding: 4px 6px;
 }
 
 /* Footer End */
