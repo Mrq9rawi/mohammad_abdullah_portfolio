@@ -225,7 +225,6 @@ main .about-me {
 main .about-me .container {
 	display: flex;
 	justify-content: flex-end;
-
 }
 
 main .about-me .container .content {
@@ -251,13 +250,19 @@ main .about-me .container .content .links a {
 	text-align: center;
 }
 
+@media (max-width: 767px) {
+	main .about-me .container .content .links a {
+		font-size: 15px;
+	}
+}
+
 /* About End */
 /* Projects Start */
 
 main .projects {
+	background-color: var(--main-black);
 	padding-top: var(--main-padding);
 	padding-bottom: var(--main-padding);
-	background-color: var(--main-black);
 }
 
 main .projects .container h1 {
@@ -306,8 +311,14 @@ main .projects .container .projects-container .project a {
 	width: 110px;
 }
 
+@media (max-width: 767px) {
+	main .projects .container .projects-container .project a {
+		font-size: 15px;
+	}
+}
+
 main .projects .container .projects-container .project a i {
-	margin-right: 3px
+	margin-bottom: 5px;
 }
 
 main .projects .container .git-hub-link {
@@ -321,3 +332,41 @@ main .projects .container .git-hub-link a {
 }
 
 /* Projects End */
+/* Services Start */
+
+main .services {
+	background-color: var(--secondary-black);
+	padding-top: var(--main-padding);
+	padding-bottom: var(--main-padding);
+}
+
+main .services .container h1 {
+	width: fit-content;
+	margin: 0 auto 70px;
+}
+
+main .services .container .content {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+	gap: 20px;
+	text-align: center;
+}
+
+main .services .container .content > div {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	background-color: var(--main-black);
+	padding: 50px 20px;
+}
+
+main .services .container .content > div i {
+	color: var(--main-purple-color);
+	margin-bottom: 10px;
+}
+
+main .services .container .content > div  h4 {
+	font-size: 20px;
+}
+
+/* Services End */
