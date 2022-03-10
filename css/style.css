@@ -2,9 +2,13 @@
 
 :root {
 	--main-padding: 100px;
-	--main-purple-color: #5337eb;
+	--main-green-color: #3c9367;
+	--main-black: #232528;
+	--secondary-black: #2d2e32;
+	/*
+	--main-green-color: #5337eb;
 	--main-black: #121214;
-	--secondary-black: #202024;
+	--secondary-black: #202024; */
 }
 
 * {
@@ -114,7 +118,7 @@ header nav .burger-icon {
 header nav .burger-icon > div {
 	width: 40px;
 	height: 5px;
-	background-color: var(--main-purple-color);
+	background-color: var(--main-green-color);
 	border-radius: 5px;
 	position: absolute;
 }
@@ -260,7 +264,7 @@ header nav .links a::before {
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	background-color: var(--main-purple-color);
+	background-color: var(--main-green-color);
 	transition: 1s;
 	z-index: -1;
 }
@@ -298,6 +302,10 @@ main .landing .container {
 	justify-content: center;
 	flex-direction: column;
 	height: 100%;
+}
+
+main .landing .container h1 {
+	letter-spacing: 1.3px;
 }
 
 main .landing .container h1 .hello {
@@ -339,7 +347,7 @@ main .landing .container .links {
 
 main .landing .container .links a {
 	padding: 20px 20px;
-	background-color: var(--main-purple-color);
+	background-color: var(--main-green-color);
 	margin-right: 30px;
 	color: white;
 	border-radius: 10px;
@@ -372,7 +380,7 @@ main .landing .contact {
 }
 
 main .landing .contact .cross-mark {
-	background-color: var(--main-purple-color);
+	background-color: var(--main-green-color);
 	position: absolute;
 	left: 0px;
 	top: 0px;
@@ -388,6 +396,10 @@ main .landing .contact .content {
 	position: absolute;
 	right: -400px;
 	transition: 1s;
+}
+
+main .landing .contact .content a {
+	color: var(--main-green-color);
 }
 
 /* Landing End */
@@ -458,7 +470,7 @@ main .projects .container .projects-container .project .links {
 }
 
 main .projects .container .projects-container .project a {
-	background-color: var(--main-purple-color);
+	background-color: var(--main-green-color);
 	color: white;
 	padding: 10px 20px;
 	border-radius: 10px;
@@ -484,7 +496,7 @@ main .projects .container .git-hub-link {
 }
 
 main .projects .container .git-hub-link a {
-	color: var(--main-purple-color);
+	color: var(--main-green-color);
 }
 
 /* Projects End */
@@ -517,7 +529,7 @@ main .services .container .content > div {
 }
 
 main .services .container .content > div i {
-	color: var(--main-purple-color);
+	color: var(--main-green-color);
 	margin-bottom: 10px;
 }
 
@@ -547,9 +559,6 @@ main .skills .container {
 	}
 }
 
-main .skills .container .text-content {
-}
-
 main .skills .container .skills-icons {
 	display: grid;
 	grid-template-columns: repeat(3, 120px);
@@ -572,7 +581,7 @@ main .skills .container .skills-icons > div {
 }
 
 main .skills .container .skills-icons i {
-	color: var(--main-purple-color);
+	color: var(--main-green-color);
 }
 
 main .skills .container .skills-icons > div.html:before,
@@ -700,7 +709,7 @@ main .skills .container .skills-icons > div::after {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	background-color: var(--main-purple-color);
+	background-color: var(--main-green-color);
 	border-radius: 0px 0px 5px 5px;
 	transition: 0.5s linear;
 }
@@ -712,7 +721,7 @@ main .skills .container .skills-icons > div:hover::after {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	background-color: var(--main-purple-color);
+	background-color: var(--main-green-color);
 	border-radius: 0px 0px 5px 5px;
 }
 
@@ -720,7 +729,7 @@ main .skills .container .skills-icons > div:hover::after {
 /* Footer Start */
 
 footer {
-	background-color: var(--main-purple-color);
+	background-color: var(--main-green-color);
 	padding-top: calc(var(--main-padding) - 50px);
 	padding-bottom: calc(var(--main-padding) - 50px);
 	position: relative;
@@ -744,7 +753,7 @@ footer .back-to-top {
 	top: 45%;
 	right: 5%;
 	transform: translateY(-50%);
-	background-color: #3a2c88;
+	background-color: #39ab72;
 	padding: 5px 10px;
 }
 
