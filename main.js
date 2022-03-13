@@ -15,13 +15,13 @@ contactLink.addEventListener("click", () => {
 		contactDiv.style.width = "300px";
 		setTimeout(() => {
 			contactContent.style.right = "25px";
-		}, 1500);
+		}, 1000);
 	} else {
 		contactDiv.classList.remove("active");
 		contactContent.style.right = "-400px";
 		setTimeout(() => {
 			contactDiv.style.width = "0%";
-		}, 1000);
+		}, 500);
 		contactDiv.classList.add("inactive");
 	}
 }

@@ -291,12 +291,6 @@ main .landing {
 	background-color: var(--main-black);
 }
 
-@media (max-width: 767px) {
-	main .landing {
-		height: calc(100vh - 163.94px);
-	}
-}
-
 main .landing .container {
 	display: flex;
 	justify-content: center;
@@ -326,17 +320,17 @@ main .landing .container h1 .job-name {
 	margin-top: 5px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
 	main .landing .container h1 .hello {
 		font-size: 13px;
 	}
 
 	main .landing .container h1 .name {
-		font-size: 40px;
+		font-size: 35px;
 	}
 
 	main .landing .container h1 .job-name {
-		font-size: 18px;
+		font-size: 16px;
 	}
 }
 
@@ -356,7 +350,7 @@ main .landing .container .links a {
 	cursor: pointer;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
 	main .landing .container .links a {
 		font-size: 13px;
 		width: fit-content;
@@ -375,7 +369,7 @@ main .landing .contact {
 	height: 90%;
 	overflow: hidden;
 	border-radius: 3% 0% 0% 0%;
-	transition: 1s;
+	transition: 0.75s;
 	padding-top: 50px;
 }
 
@@ -395,7 +389,7 @@ main .landing .contact .content {
 	gap: 40px;
 	position: absolute;
 	right: -400px;
-	transition: 1s;
+	transition: 0.75s;
 }
 
 main .landing .contact .content a {
@@ -413,7 +407,13 @@ main .about-me {
 
 main .about-me .container {
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+	main .about-me .container {
+		flex-direction: column;
+	}
 }
 
 main .about-me .container .content {
