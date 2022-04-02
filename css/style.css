@@ -424,6 +424,10 @@ main .about-me .container .content {
 	max-width: 100%;
 }
 
+main .about-me .container .content p:nth-of-type(2) a {
+	color: var(--main-green-color);
+}
+
 /* About End */
 /* Projects Start */
 
