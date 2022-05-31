@@ -1,10 +1,10 @@
-var animation = bodymovin.loadAnimation({
-	container: document.getElementById('my-name'),
-	renderer: 'svg',
-	loop: false,
-	autoplay: true,
-	path: '../js/my-name.json' // lottie file path
-});
+// var animation = bodymovin.loadAnimation({
+// 	container: document.getElementById('my-name'),
+// 	renderer: 'svg',
+// 	loop: false,
+// 	autoplay: true,
+// 	path: '../js/my-name.json' // lottie file path
+// });
 
 
 const contactLink = document.querySelector(".contact-link");
