@@ -1,16 +1,4 @@
-// var animation = bodymovin.loadAnimation({
-// 	container: document.getElementById('my-name'),
-// 	renderer: 'svg',
-// 	loop: false,
-// 	autoplay: true,
-// 	path: '../js/my-name.json' // lottie file path
-// });
-
-
 const contactLink = document.querySelector(".contact-link");
-const contactDiv = document.querySelector(".contact");
-const contactContent = document.querySelector(".contact .content");
-const crossMark = document.querySelector(".cross-mark");
 const burgerIcon = document.querySelector(".burger-icon");
 const burgerIconDiv1 = document.querySelector(".div1");
 const burgerIconDiv2 = document.querySelector(".div2");
@@ -18,30 +6,48 @@ const burgerIconDiv3 = document.querySelector(".div3");
 const navLinks = document.querySelector("header nav .links");
 
 contactLink.addEventListener("click", () => {
-	if (contactDiv.classList.contains("inactive")) {
-		contactDiv.classList.remove("inactive");
-		contactDiv.classList.add("active");
-		contactDiv.style.width = "300px";
-		setTimeout(() => {
-			contactContent.style.right = "25px";
-		}, 1000);
-	} else {
-		contactDiv.classList.remove("active");
-		contactContent.style.right = "-400px";
-		setTimeout(() => {
-			contactDiv.style.width = "0%";
-		}, 500);
-		contactDiv.classList.add("inactive");
-	}
-}
-);
+	const alertDiv = document.createElement("div");
+	alertDiv.setAttribute("id", "alert");
 
-crossMark.addEventListener("click", () => {
-	contactDiv.classList.remove("active");
-	contactContent.style.right = "-400px";
-	setTimeout(() => {
-		contactDiv.style.width = "0%";
-	}, 1000); contactDiv.classList.add("inactive");
+	const overlayDiv = document.createElement("div");
+	overlayDiv.classList.add("overlay");
+	overlayDiv.addEventListener("click", deleteAlert);
+
+	const contentDiv = document.createElement("div");
+	contentDiv.classList.add("content");
+
+	const crossMarkDiv = document.createElement("div");
+	crossMarkDiv.classList.add("cross-mark");
+	crossMarkDiv.addEventListener("click", deleteAlert);
+
+	const emailP = document.createElement("p");
+	emailP.classList.add("text");
+	emailP.innerHTML = `
+	Email:
+	<a href="mailto:moh.abdullah02@gmail.com">moh.abdullah02@gmail.com</a>
+	`;
+
+	const phoneP = document.createElement("p");
+	phoneP.classList.add("text");
+	phoneP.innerHTML = `
+	</p>
+	<p>Phone: <a href="tel:+1 (647) 575-6094">+16475756094</a></p>
+	`;
+
+	document.body.appendChild(alertDiv);
+	alertDiv.appendChild(overlayDiv);
+	alertDiv.appendChild(contentDiv);
+	contentDiv.appendChild(crossMarkDiv);
+	contentDiv.appendChild(emailP);
+	contentDiv.appendChild(phoneP);
+
+	function deleteAlert() {
+		overlayDiv.classList.add("remove");
+		contentDiv.classList.add("remove");
+		setTimeout(() => {
+			alertDiv.remove();
+		}, 300);
+	}
 }
 );
 

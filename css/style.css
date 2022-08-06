@@ -92,7 +92,7 @@ header nav {
 }
 
 header nav .logo {
-	width: 75px;
+	width: 100px;
 }
 
 @media (max-width: 767px) {
@@ -230,7 +230,7 @@ header nav .links {
 	header nav .links {
 		width: 100%;
 		position: absolute;
-		bottom: -88px;
+		top: 96px;
 		background-color: var(--secondary-black);
 		left: 0%;
 		justify-content: center;
@@ -293,58 +293,53 @@ main .landing {
 
 main .landing .container {
 	display: flex;
-	justify-content: center;
-	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 	height: 100%;
 }
 
-main .landing .container h1 {
+main .landing .container .text-content h1 {
 	letter-spacing: 1.3px;
 }
 
-main .landing .container h1 .hello {
+main .landing .container .text-content h1 .hello {
 	font-size: 18px;
 	font-weight: 400;
 	display: block;
 	margin-bottom: 7px;
 }
 
-main .landing .container h1 .name {
+main .landing .container .text-content h1 .name {
 	display: block;
 	font-size: 45px;
 }
 
-/* main .landing .container h1 #my-name svg {
-	width: 100%;
-	max-height: 45%;
-} */
-
-main .landing .container h1 .job-name {
+main .landing .container .text-content h1 .job-name {
 	font-size: 23px;
 	display: block;
 	margin-top: 5px;
 }
 
 @media (max-width: 991px) {
-	main .landing .container h1 .hello {
-		font-size: 13px;
+	main .landing .container .text-content h1 .hello {
+		font-size: 18px;
 	}
 
-	main .landing .container h1 .name {
-		font-size: 35px;
+	main .landing .container .text-content h1 .name {
+		font-size: 41px;
 	}
 
-	main .landing .container h1 .job-name {
-		font-size: 16px;
+	main .landing .container .text-content h1 .job-name {
+		font-size: 21px;
 	}
 }
 
-main .landing .container .links {
+main .landing .container .text-content .links {
 	margin-top: 50px;
 	display: flex;
 }
 
-main .landing .container .links a {
+main .landing .container .text-content .links a {
 	padding: 20px 20px;
 	background-color: var(--main-green-color);
 	margin-right: 30px;
@@ -356,11 +351,50 @@ main .landing .container .links a {
 }
 
 @media (max-width: 991px) {
-	main .landing .container .links a {
-		font-size: 13px;
+	main .landing .container .text-content .links a {
+		font-size: 16px;
 		width: fit-content;
 		margin-right: 10px;
 	}
+}
+
+main .landing .container .images {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	flex-shrink: 1;
+}
+
+@media (max-width: 1199px) {
+	main .landing .container .images {
+		max-width: 400px;
+	}
+}
+
+@media (max-width: 991px) {
+	main .landing .container .images {
+		justify-content: flex-end;
+		max-width: auto;
+	}
+
+	main .landing .container .images img:first-of-type {
+		display: none;
+	}
+
+	main .landing .container .images img:last-of-type {
+		max-width: 75%;
+	}
+}
+
+@media (max-width: 767px) {
+	main .landing .container .images {
+		display: none;
+	}
+}
+
+main .landing .container .images img {
+	width: 275px;
+	max-width: 50%;
 }
 
 main .landing .contact {
@@ -413,11 +447,14 @@ main .about-me {
 main .about-me .container {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
 	main .about-me .container {
-		flex-direction: column;
+		flex-direction: column-reverse;
+		gap: 20px;
 	}
 }
 
@@ -431,6 +468,11 @@ main .about-me .container .content {
 
 main .about-me .container .content p:nth-of-type(2) a {
 	color: var(--main-green-color);
+}
+
+main .about-me .container img {
+	width: 500px;
+	max-width: 100%;
 }
 
 /* About End */
