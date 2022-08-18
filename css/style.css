@@ -372,9 +372,23 @@ main .landing .container .text-content h1 .name::after {
 }
 
 main .landing .container .text-content h1 .job-name {
-	font-size: 2vw;
+	font-size: 1.8vw;
 	display: block;
 	margin-top: 5px;
+}
+
+@media (max-width: 991px) {
+	main .landing .container .text-content h1 .hello {
+		font-size: 2vw;
+	}
+
+	main .landing .container .text-content h1 .name {
+		font-size: 4.6vw;
+	}
+
+	main .landing .container .text-content h1 .job-name {
+		font-size: 2.1vw;
+	}
 }
 
 @media (max-width: 767px) {
@@ -383,7 +397,7 @@ main .landing .container .text-content h1 .job-name {
 	}
 
 	main .landing .container .text-content h1 .name {
-		font-size: 7.5vw;
+		font-size: 8.5vw;
 	}
 
 	main .landing .container .text-content h1 .job-name {
