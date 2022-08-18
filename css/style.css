@@ -289,6 +289,38 @@ main .landing {
 	color: white;
 	position: relative;
 	background-color: var(--main-black);
+	z-index: 1;
+	overflow: hidden;
+}
+
+main .landing::before {
+	content: "";
+	width: 200%;
+	height: 300px;
+	position: absolute;
+	background-color: var(--main-green-color);
+	bottom: -160px;
+	right: 50%;
+	transform: translateX(50%) skew(0, -10deg);
+	border-radius: 50%;
+	animation: waving 5s ease-in-out infinite alternate;
+	z-index: -1;
+}
+
+@media (max-width: 767px) {
+	main .landing::before {
+		bottom: -200px;
+	}
+}
+
+@keyframes waving {
+	0% {
+		transform: translateX(50%) skew(0, -10deg);
+	}
+
+	100% {
+		transform: translateX(30%) skew(10deg, 0);
+	}
 }
 
 main .landing .container {
@@ -303,7 +335,7 @@ main .landing .container .text-content h1 {
 }
 
 main .landing .container .text-content h1 .hello {
-	font-size: 18px;
+	font-size: 1.7vw;
 	font-weight: 400;
 	display: block;
 	margin-bottom: 7px;
@@ -311,26 +343,51 @@ main .landing .container .text-content h1 .hello {
 
 main .landing .container .text-content h1 .name {
 	display: block;
-	font-size: 45px;
+	font-size: 3.5vw;
+	visibility: hidden;
+	position: relative;
+	width: fit-content;
+}
+
+main .landing .container .text-content h1 .name::after {
+	content: "";
+	width: 3px;
+	height: 100%;
+	background-color: white;
+	position: absolute;
+	top: 0;
+	right: -3px;
+	animation: blinking 1s infinite;
+	margin-left: 3px;
+}
+
+@keyframes blinking {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
 }
 
 main .landing .container .text-content h1 .job-name {
-	font-size: 23px;
+	font-size: 2vw;
 	display: block;
 	margin-top: 5px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
 	main .landing .container .text-content h1 .hello {
-		font-size: 18px;
+		font-size: 3vw;
 	}
 
 	main .landing .container .text-content h1 .name {
-		font-size: 41px;
+		font-size: 7.5vw;
 	}
 
 	main .landing .container .text-content h1 .job-name {
-		font-size: 21px;
+		font-size: 4vw;
 	}
 }
 

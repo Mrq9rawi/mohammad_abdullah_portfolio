@@ -81,3 +81,28 @@ function backToTop() {
 		behavior: 'smooth'
 	});
 }
+
+// my name Animation
+const myName = document.querySelector('main .landing .container .text-content h1 .name');
+let myNameLetters = ["M", "o", "h", "a", "m", "m", "a", "d", " ", "A", "b", "d", "u", "l", "l", "a", "h"];
+let letterIndex = 0;
+setTimeout(() => {
+	myName.textContent = "";
+	myName.style.visibility = "visible";
+}, 200);
+
+const writeMyName = setInterval(() => {
+	if (letterIndex == myNameLetters.length - 1) {
+		window.clearInterval(writeMyName);
+	}
+	myName.textContent += myNameLetters[letterIndex];
+	letterIndex++;
+}, 200);
+
+// about me age
+const ageSpan = document.querySelector(".about-me .age");
+const currentAge = new Date().getFullYear() - 2002;
+
+
+
+ageSpan.textContent = currentAge;
