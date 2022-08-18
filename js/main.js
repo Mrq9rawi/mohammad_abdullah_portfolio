@@ -69,3 +69,15 @@ burgerIcon.addEventListener("click", () => {
 
 	}
 });
+
+// back to top
+const bactToTopButton = document.querySelector('.back-to-top');
+
+bactToTopButton.addEventListener("click", backToTop);
+
+function backToTop() {
+	window.scroll({
+		top: 0,
+		behavior: 'smooth'
+	});
+}

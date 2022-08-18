@@ -603,7 +603,7 @@ main .skills .container {
 	align-items: center;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
 	main .skills .container {
 		flex-direction: column;
 		gap: 60px;
@@ -612,7 +612,7 @@ main .skills .container {
 
 main .skills .container .skills-icons {
 	display: grid;
-	grid-template-columns: repeat(3, 120px);
+	grid-template-columns: repeat(4, 120px);
 	gap: 20px;
 }
 
@@ -629,112 +629,71 @@ main .skills .container .skills-icons > div {
 	text-align: center;
 	border-radius: 10px;
 	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 main .skills .container .skills-icons i {
 	color: var(--main-green-color);
 }
 
-main .skills .container .skills-icons > div.html:before,
-main .skills .container .skills-icons > div.css:before,
-main .skills .container .skills-icons > div.js:before {
+main .skills .container .skills-icons > div::before {
 	position: absolute;
 	width: 50%;
 	font-size: 12px;
 	height: 40px;
 	text-align: center;
-	line-height: 1.5;
 	background-color: var(--secondary-black);
 	color: white;
-	clip-path: polygon(0 0, 100% 0, 100% 75%, 65% 75%, 50% 100%, 35% 75%, 0 75%);
-	top: 0px;
 	border-radius: 3px;
-	line-height: 2.5;
 	z-index: -1;
 	transition: 0.5s;
 	left: 50%;
 	transform: translateX(-50%);
+	content: attr(data-skill);
 }
 
-main .skills .container .skills-icons > div.html:before {
-	content: "HTML";
+main .skills .container .skills-icons > div:nth-child(-n + 4)::before {
+	clip-path: polygon(0 0, 100% 0, 100% 75%, 65% 75%, 50% 100%, 35% 75%, 0 75%);
+	top: 0px;
+	line-height: 2.5;
 }
 
-main .skills .container .skills-icons > div.css:before {
-	content: "CSS";
-}
-
-main .skills .container .skills-icons > div.js:before {
-	content: "JavaScript";
-	width: 70%;
-}
-
-main .skills .container .skills-icons > div.html:hover::before,
-main .skills .container .skills-icons > div.css:hover::before,
-main .skills .container .skills-icons > div.js:hover::before {
+main .skills .container .skills-icons > div:nth-child(-n + 4):hover::before {
 	top: -45px;
 	z-index: 1;
 }
 
-main .skills .container .skills-icons > div.git::before,
-main .skills .container .skills-icons > div.wordpress::before,
-main .skills .container .skills-icons > div.terminal::before {
-	position: absolute;
-	width: 50%;
-	font-size: 12px;
-	height: 40px;
-	text-align: center;
-	line-height: 1.5;
-	background-color: var(--secondary-black);
-	color: white;
+main .skills .container .skills-icons > div:nth-last-child(-n + 4)::before {
 	clip-path: polygon(0 25%, 35% 25%, 50% 0%, 65% 25%, 100% 25%, 100% 100%, 0% 100%);
-	bottom: -0px;
-	border-radius: 3px;
+	bottom: 0px;
 	line-height: 4;
-	z-index: -1;
-	transition: 0.5s;
-	left: 50%;
-	transform: translateX(-50%);
 }
 
-@media (max-width: 767px) {
-	main .skills .container .skills-icons > div.git::before,
-	main .skills .container .skills-icons > div.wordpress::before,
-	main .skills .container .skills-icons > div.terminal::before {
-		clip-path: polygon(0 0, 100% 0, 100% 75%, 65% 75%, 50% 100%, 35% 75%, 0 75%);
-		top: 0px;
-		line-height: 2.5;
-	}
-}
-
-main .skills .container .skills-icons > div.git:before {
-	content: "Git";
-}
-
-main .skills .container .skills-icons > div.wordpress:before {
-	content: "WordPress";
-	width: 70%;
-}
-
-main .skills .container .skills-icons > div.terminal:before {
-	content: "Terminal";
-	width: 70%;
-}
-
-main .skills .container .skills-icons > div.git:hover::before,
-main .skills .container .skills-icons > div.wordpress:hover::before,
-main .skills .container .skills-icons > div.terminal:hover::before {
+main .skills .container .skills-icons > div:nth-last-child(-n + 4):hover::before {
 	bottom: -45px;
 	z-index: 1;
 }
 
 @media (max-width: 767px) {
-	main .skills .container .skills-icons > div.git:hover::before,
-	main .skills .container .skills-icons > div.wordpress:hover::before,
-	main .skills .container .skills-icons > div.terminal:hover::before {
+	main .skills .container .skills-icons > div:nth-last-child(-n + 4)::before {
+		clip-path: polygon(0 0, 100% 0, 100% 75%, 65% 75%, 50% 100%, 35% 75%, 0 75%);
+		top: 0px;
+		line-height: 2.5;
+	}
+
+	main .skills .container .skills-icons > div:nth-last-child(-n + 4):hover::before {
 		top: -45px;
 		z-index: 1;
 	}
+}
+
+main .skills .container .skills-icons > div.wordpress:before,
+main .skills .container .skills-icons > div.terminal:before,
+main .skills .container .skills-icons > div.js:before,
+main .skills .container .skills-icons > div.bootstrap:before {
+	width: 70%;
 }
 
 main .skills .container .skills-icons > div::after {
@@ -790,6 +749,7 @@ footer .back-to-top {
 	transform: translateY(-50%);
 	background-color: #39ab72;
 	padding: 5px 10px;
+	cursor: pointer;
 }
 
 /* Footer End */
