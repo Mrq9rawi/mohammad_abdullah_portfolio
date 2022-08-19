@@ -239,6 +239,10 @@ header nav .links {
 		z-index: 2;
 		transition: 1s;
 	}
+
+	header nav .links.show {
+		height: 88.4px;
+	}
 }
 
 header nav .links a {

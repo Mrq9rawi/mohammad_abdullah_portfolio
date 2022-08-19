@@ -58,29 +58,16 @@ burgerIcon.addEventListener("click", () => {
 		burgerIconDiv1.style.cssText = "animation: burger-div-1-active 1s ease-out forwards";
 		burgerIconDiv2.style.cssText = "animation: burger-div-2-active 1s ease-out forwards";
 		burgerIconDiv3.style.cssText = "animation: burger-div-3-active 1s ease-out forwards";
-		navLinks.style.cssText = "height: 88.4px;";
+		navLinks.classList.add("show");
 	} else {
 		burgerIcon.classList.remove("active");
 		burgerIcon.classList.add("inactive");
 		burgerIconDiv1.style.cssText = "animation: burger-div-1-inactive 1s ease-out forwards";
 		burgerIconDiv2.style.cssText = "animation: burger-div-2-inactive 1s ease-out forwards";
 		burgerIconDiv3.style.cssText = "animation: burger-div-3-inactive .75s ease-out forwards";
-		navLinks.style.cssText = "height: 0px;";
-
+		navLinks.classList.remove("show");
 	}
 });
-
-// back to top
-const bactToTopButton = document.querySelector('.back-to-top');
-
-bactToTopButton.addEventListener("click", backToTop);
-
-function backToTop() {
-	window.scroll({
-		top: 0,
-		behavior: 'smooth'
-	});
-}
 
 // my name Animation
 const myName = document.querySelector('main .landing .container .text-content h1 .name');
@@ -103,6 +90,17 @@ const writeMyName = setInterval(() => {
 const ageSpan = document.querySelector(".about-me .age");
 const currentAge = new Date().getFullYear() - 2002;
 
-
-
 ageSpan.textContent = currentAge;
+
+
+// back to top
+const bactToTopButton = document.querySelector('.back-to-top');
+
+bactToTopButton.addEventListener("click", backToTop);
+
+function backToTop() {
+	window.scroll({
+		top: 0,
+		behavior: 'smooth'
+	});
+}
